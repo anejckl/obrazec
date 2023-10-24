@@ -1,3 +1,8 @@
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
     background-color: powderblue;
 }
@@ -24,7 +29,7 @@ h1{
 .main img {
     width: 100%; 
     height: auto; 
-    position: absolute
+    position: absolute;
 }
 
 .formBackground {
