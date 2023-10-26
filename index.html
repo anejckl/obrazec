@@ -13,7 +13,7 @@
 	<body>
 		<div class="main">
 			<div class="formBackground">
-				<form action="/#.php">
+				<form action="">
 					<div class="container">
 						<h1>
 							Travel agency
@@ -27,28 +27,28 @@
 								Email
 							</b>
 						</label>
-						<input type="text" placeholder="Enter Email" name="email" id="email" pattern="[a-zA-Z0-9.]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" required>
+						<input type="text" placeholder="Enter Email" name="email" id="email" pattern="[a-zA-Z0-9.]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}" >
 						<label for="username">
 							<b>
 								Username
 							</b>
 						</label>
 						<input type="text" placeholder="Enter Username" name="username" id="username"
-						required>
+						>
 						<label for="psw">
 							<b>
 								Password
 							</b>
 						</label>
 						<input type="password" placeholder="Enter Password" name="psw" id="psw"
-						required>
+						>
 						<label for="psw-repeat">
 							<b>
 								Repeat Password
 							</b>
 						</label>
 						<input type="password" placeholder="Repeat Password" name="psw-repeat"
-						id="psw-repeat" required>
+						id="psw-repeat" >
 						<label for="phone">
 							<b>
 								Phone Number
@@ -696,7 +696,7 @@
 								</option>
 							</select>
 							<input type="text" placeholder="Enter Phone Number" name="phone" id="phone"
-							required>
+							>
 						</div>
 						<hr>
 						<p class="formFooter">
@@ -711,7 +711,7 @@
 						</button>
 						<p class="loginText">
 							Already have an account?
-							<button type="login" class="loginbtn">
+							<button type="submit" class="loginbtn" formaction="login.html">
 								<b>
 									Log in
 								</b>

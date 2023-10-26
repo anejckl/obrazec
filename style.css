@@ -1,9 +1,10 @@
 body {
-  margin-top: 40px;
+  margin-top: 25px;
   background-image: url('IMAGE1.png');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 h1{
