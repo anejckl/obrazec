@@ -722,21 +722,30 @@
 			</div>
 		</div>
         <script>
-            function updatePhoneNumber() {
-                const countryCodeSelect = document.getElementById("country-code");
-                const phoneInput = document.getElementById("phone");
-                const selectedCountryCode = countryCodeSelect.value;
-                const initialPhoneNumber = "";
-                phoneInput.value = `+${selectedCountryCode} ${initialPhoneNumber}`;
-            }
-            document.addEventListener("DOMContentLoaded", updatePhoneNumber);
-            const countryCodeSelect = document.getElementById("country-code");
-            countryCodeSelect.addEventListener("change", updatePhoneNumber);
+			function updatePhoneNumber() {
+    const countryCodeSelect = document.getElementById("country-code");
+    const phoneInput = document.getElementById("phone");
+    const selectedCountryCode = countryCodeSelect.value;
+    const numericValue = phoneInput.value.replace(/\D/g, "");
+    const parts = phoneInput.value.split(" ");
+    let updatedPhoneNumber = `+${selectedCountryCode}`;
 
-            function isValidEmail(email) {
-                const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-                return emailRegex.test(email);
-            }
+    if (parts.length > 1) {
+        updatedPhoneNumber += ` ${parts[1]}`;
+    }
+
+    phoneInput.value = updatedPhoneNumber;
+}
+
+document.addEventListener("DOMContentLoaded", updatePhoneNumber);
+const countryCodeSelect = document.getElementById("country-code");
+countryCodeSelect.addEventListener("change", updatePhoneNumber);
+
+document.getElementById("phone").addEventListener("input", function (e) {
+    let input = e.target.value.replace(/\D/g, "");
+    e.target.value = input;
+});
+
         </script>
 	</body>
 </html>
